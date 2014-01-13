@@ -61,7 +61,7 @@ public class MainActivity extends Activity implements GooglePlayServicesClient.C
             googleMap.getUiSettings().setMyLocationButtonEnabled(true);
             
             /*one can see the current location*/
-            googleMap.setMyLocationEnabled(true);
+            //googleMap.setMyLocationEnabled(true);
             
             /*check if map is created successfully or not*/
             if (googleMap == null) {
