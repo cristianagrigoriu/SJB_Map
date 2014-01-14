@@ -8,6 +8,15 @@
 package com.cg.sjb_map;
 
 public final class R {
+    public static final class array {
+        /**  Nav Drawer List Item Icons 
+ Keep them in order as the titles are in 
+         */
+        public static final int nav_drawer_icons=0x7f090001;
+        /**  Nav Drawer Menu Items 
+         */
+        public static final int nav_drawer_items=0x7f090000;
+    }
     public static final class attr {
         /** 
     The size of the ad. It must be one of BANNER, FULL_BANNER, LEADERBOARD,
@@ -201,29 +210,48 @@ containing a value of this type.
         public static final int common_signin_btn_text_normal_light=0x7f020015;
         public static final int common_signin_btn_text_pressed_dark=0x7f020016;
         public static final int common_signin_btn_text_pressed_light=0x7f020017;
-        public static final int ic_launcher=0x7f020018;
-        public static final int ic_plusone_medium_off_client=0x7f020019;
-        public static final int ic_plusone_small_off_client=0x7f02001a;
-        public static final int ic_plusone_standard_off_client=0x7f02001b;
-        public static final int ic_plusone_tall_off_client=0x7f02001c;
+        public static final int counter_bg=0x7f020018;
+        public static final int ic_communities=0x7f020019;
+        public static final int ic_drawer=0x7f02001a;
+        public static final int ic_launcher=0x7f02001b;
+        public static final int ic_notebook=0x7f02001c;
+        public static final int ic_plusone_medium_off_client=0x7f02001d;
+        public static final int ic_plusone_small_off_client=0x7f02001e;
+        public static final int ic_plusone_standard_off_client=0x7f02001f;
+        public static final int ic_plusone_tall_off_client=0x7f020020;
+        public static final int ic_question_mark=0x7f020021;
+        public static final int ic_rating=0x7f020022;
+        public static final int ic_settings=0x7f020023;
+        public static final int list_item_bg_normal=0x7f020024;
+        public static final int list_item_bg_pressed=0x7f020025;
+        public static final int list_selector=0x7f020026;
     }
     public static final class id {
-        public static final int action_settings=0x7f050006;
+        public static final int action_settings=0x7f05000d;
+        public static final int counter=0x7f05000b;
+        public static final int drawer_layout=0x7f050005;
+        public static final int frame_container=0x7f050006;
         public static final int hybrid=0x7f050004;
-        public static final int map=0x7f050005;
+        public static final int icon=0x7f050009;
+        public static final int list_slidermenu=0x7f050008;
+        public static final int map=0x7f050007;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
         public static final int satellite=0x7f050002;
         public static final int terrain=0x7f050003;
+        public static final int title=0x7f05000a;
+        public static final int txtLabel=0x7f05000c;
     }
     public static final class integer {
         public static final int google_play_services_version=0x7f070000;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
+        public static final int drawer_list_item=0x7f030001;
+        public static final int fragment_find_road=0x7f030002;
     }
     public static final class menu {
-        public static final int main=0x7f0a0000;
+        public static final int main=0x7f0b0000;
     }
     public static final class string {
         public static final int action_settings=0x7f06001b;
@@ -322,6 +350,11 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f060013;
+        /**  Content Description 
+         */
+        public static final int desc_list_item_icon=0x7f06001f;
+        public static final int drawer_close=0x7f06001e;
+        public static final int drawer_open=0x7f06001d;
         public static final int hello_world=0x7f06001c;
     }
     public static final class style {
@@ -346,11 +379,11 @@ containing a value of this type.
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f090000;
+        public static final int AppBaseTheme=0x7f0a0000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f090001;
+        public static final int AppTheme=0x7f0a0001;
     }
     public static final class styleable {
         /** Attributes that can be used with a AdsAttrs.
