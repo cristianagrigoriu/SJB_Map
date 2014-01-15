@@ -176,16 +176,16 @@ public class MainActivity extends Activity implements GooglePlayServicesClient.C
         	
         	break;
         /*case 1:
-            fragment = new FindPeopleFragment();
+            
+            Intent intent = new Intent(this, RateRoadActivity.class);
+        	startActivity(intent);
+            
             break;
         case 2:
             fragment = new PhotosFragment();
             break;
         case 3:
             fragment = new CommunityFragment();
-            break;
-        case 4:
-            fragment = new PagesFragment();
             break;*/
  
         default:
