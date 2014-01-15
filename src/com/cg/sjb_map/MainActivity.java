@@ -3,9 +3,15 @@ package com.cg.sjb_map;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.content.ComponentName;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
@@ -13,6 +19,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -29,6 +36,8 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 
 public class MainActivity extends Activity implements GooglePlayServicesClient.ConnectionCallbacks,
 													  GooglePlayServicesClient.OnConnectionFailedListener{
@@ -102,6 +111,8 @@ public class MainActivity extends Activity implements GooglePlayServicesClient.C
         // Recycle the typed array
         navMenuIcons.recycle();
  
+        mDrawerList.setOnItemClickListener(new SlideMenuClickListener());
+        
         // setting the nav drawer list adapter
         adapter = new NavDrawerListAdapter(getApplicationContext(),
                 navDrawerItems);
@@ -136,6 +147,52 @@ public class MainActivity extends Activity implements GooglePlayServicesClient.C
         }
 	}
  
+	/**
+	 * click listener for the sliding menu
+	 */
+	/**
+     * Slide menu item click listener
+     * */
+    private class SlideMenuClickListener implements
+            ListView.OnItemClickListener {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position,
+                long id) {
+            // display view for selected nav drawer item
+            displayView(position);
+        }
+    }
+ 
+     /**
+     * Diplaying fragment view for selected nav drawer list item
+     * */
+    private void displayView(int position) {
+        // update the main content by replacing fragments
+        switch (position) {
+        case 0:
+        	
+        	Intent intent = new Intent(this, FindRoadActivity.class);
+        	startActivity(intent);
+        	
+        	break;
+        /*case 1:
+            fragment = new FindPeopleFragment();
+            break;
+        case 2:
+            fragment = new PhotosFragment();
+            break;
+        case 3:
+            fragment = new CommunityFragment();
+            break;
+        case 4:
+            fragment = new PagesFragment();
+            break;*/
+ 
+        default:
+            break;
+        }
+    }
+	
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // toggle nav drawer on selecting action bar app icon/title
@@ -226,7 +283,7 @@ public class MainActivity extends Activity implements GooglePlayServicesClient.C
     	MarkerOptions marker = new MarkerOptions().position(new LatLng(latitude, longitude)).title("You are here!").visible(true);
     	
     	/*change to violet colour*/
-    	marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET));
+    	marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
     	
     	/*add marker to map*/
     	googleMap.addMarker(marker);
