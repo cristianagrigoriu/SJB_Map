@@ -3,15 +3,10 @@ package com.cg.sjb_map;
 import java.util.ArrayList;
 
 import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.content.ComponentName;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
-import android.graphics.Color;
 import android.location.Location;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
@@ -36,8 +31,6 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.maps.model.Polyline;
-import com.google.android.gms.maps.model.PolylineOptions;
 
 public class MainActivity extends Activity implements GooglePlayServicesClient.ConnectionCallbacks,
 													  GooglePlayServicesClient.OnConnectionFailedListener{
@@ -153,7 +146,7 @@ public class MainActivity extends Activity implements GooglePlayServicesClient.C
 	/**
      * Slide menu item click listener
      * */
-    private class SlideMenuClickListener implements
+    public class SlideMenuClickListener implements
             ListView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position,
@@ -175,13 +168,13 @@ public class MainActivity extends Activity implements GooglePlayServicesClient.C
         	startActivity(intent);
         	
         	break;
-        /*case 1:
+        case 1:
             
-            Intent intent = new Intent(this, RateRoadActivity.class);
-        	startActivity(intent);
+            Intent intent1 = new Intent(this, RateRoadActivity.class);
+        	startActivity(intent1);
             
             break;
-        case 2:
+        /*case 2:
             fragment = new PhotosFragment();
             break;
         case 3:
@@ -282,7 +275,7 @@ public class MainActivity extends Activity implements GooglePlayServicesClient.C
     	/*create marker*/
     	MarkerOptions marker = new MarkerOptions().position(new LatLng(latitude, longitude)).title("You are here!").visible(true);
     	
-    	/*change to violet colour*/
+    	/*change to blue colour*/
     	marker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
     	
     	/*add marker to map*/

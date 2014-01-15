@@ -14,6 +14,13 @@
         <item>Your Rated Roads</item>
         <item>Options</item>
     </string-array>
+    
+    <string-array name="rate_road_items">
+        <item>Material</item>
+        <item>Number of bumps</item>
+        <item>Traffic Signs</item>
+        <item>Markers</item>
+    </string-array>
 
     <!-- Nav Drawer List Item Icons -->
     <!-- Keep them in order as the titles are in -->
@@ -27,5 +34,6 @@
     <!-- Content Description -->
     <string name="desc_list_item_icon">Item Icon</string>
     <string name="title_activity_find_road">FindRoadActivity</string>
+    <string name="title_activity_rate_road">RateRoadActivity</string>
 
 </resources>
