@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="48dp"
+    android:layout_height="30dp"
     android:background="@drawable/list_selector">
  
     <CheckBox
@@ -10,23 +10,25 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/icon"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="15dp"/>
+        android:layout_marginLeft="0dp"/>
  
     <TextView
         android:id="@+id/rateOption"
-        android:layout_width="match_parent"
-        android:layout_height="97.5dp"
-        android:layout_toRightOf="@id/icon"
-        android:gravity="center_vertical"
-        android:paddingRight="40dp"
-        android:textSize="23sp"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingRight="0dp"
+        android:textSize="23sp"
+        android:layout_toRightOf="@id/checkBox1"/>
      
     <EditText 
         android:id="@+id/rating"
 		android:layout_weight="1" 
 		android:layout_height="wrap_content" 
-		android:layout_marginRight="5pt"  
-		android:layout_width="match_parent" 
+		android:layout_marginRight="0pt"  
+		android:layout_width="wrap_content" 
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentRight="true"
 		android:inputType="numberDecimal"/>
  
 </RelativeLayout>

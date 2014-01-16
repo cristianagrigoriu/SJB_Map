@@ -24,7 +24,7 @@ public class RateRoadItem{
         return this.rateOption;
     }
      
-    public int getrating(){
+    public int getRating(){
         return this.rating;
     }
      
@@ -40,7 +40,7 @@ public class RateRoadItem{
         this.rateOption = rateOption;
     }
      
-    public void setCount(int rating){
+    public void setRating(int rating){
         this.rating = rating;
     }
      

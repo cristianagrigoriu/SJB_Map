@@ -50,7 +50,7 @@ public class RateRoadActivity extends Activity {
                 RateRoadItems);
         
         //aici e problema!!!!!!!!!!
-        //listview.setAdapter(adapter);
+        listview.setAdapter(adapter);
 		
 	}
 	

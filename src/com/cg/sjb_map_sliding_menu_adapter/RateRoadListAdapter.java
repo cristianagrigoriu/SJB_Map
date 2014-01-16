@@ -55,8 +55,8 @@ public class RateRoadListAdapter extends BaseAdapter {
         EditText txtCount = (EditText) convertView.findViewById(R.id.rating);
           
         isChecked.setChecked(RateRoadItems.get(position).getIsChecked());        
-        txtTitle.setText(RateRoadItems.get(position).getRateOption());
-        txtCount.setText(RateRoadItems.get(position).getrating());
+        txtTitle.setText(String.valueOf(RateRoadItems.get(position).getRateOption()));
+        txtCount.setText(String.valueOf(RateRoadItems.get(position).getRating()), TextView.BufferType.EDITABLE);
          
         return convertView;
     }
