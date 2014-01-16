@@ -14,7 +14,6 @@
         <item>Your Rated Roads</item>
         <item>Options</item>
     </string-array>
-    
     <string-array name="rate_road_items">
         <item>Material</item>
         <item>Number of bumps</item>
@@ -35,5 +34,6 @@
     <string name="desc_list_item_icon">Item Icon</string>
     <string name="title_activity_find_road">FindRoadActivity</string>
     <string name="title_activity_rate_road">RateRoadActivity</string>
+    <string name="title_activity_your_rated_roads">YourRatedRoadsActivity</string>
 
 </resources>

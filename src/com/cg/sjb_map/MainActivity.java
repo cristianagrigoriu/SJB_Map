@@ -161,23 +161,27 @@ public class MainActivity extends Activity implements GooglePlayServicesClient.C
      * */
     private void displayView(int position) {
         // update the main content by replacing fragments
+    	Intent intent;
         switch (position) {
         case 0:
         	
-        	Intent intent = new Intent(this, FindRoadActivity.class);
+        	intent = new Intent(this, FindRoadActivity.class);
         	startActivity(intent);
         	
         	break;
         case 1:
             
-            Intent intent1 = new Intent(this, RateRoadActivity.class);
-        	startActivity(intent1);
+            intent = new Intent(this, RateRoadActivity.class);
+        	startActivity(intent);
             
             break;
-        /*case 2:
-            fragment = new PhotosFragment();
+        case 2:
+        	
+        	intent = new Intent(this, YourRatedRoadsActivity.class);
+        	startActivity(intent);
+        	
             break;
-        case 3:
+        /*case 3:
             fragment = new CommunityFragment();
             break;*/
  

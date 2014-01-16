@@ -18,7 +18,6 @@ import android.graphics.Color;
 import android.location.Location;
 import android.os.Bundle;
 import android.app.Activity;
-import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.widget.Toast;
@@ -34,8 +33,6 @@ public class FindRoadActivity extends Activity implements GooglePlayServicesClie
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_find_road);
-		
-		Intent intent = getIntent();
 		
 		// Check that Google Play services is available
         int resultCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
