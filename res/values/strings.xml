@@ -35,5 +35,6 @@
     <string name="title_activity_find_road">FindRoadActivity</string>
     <string name="title_activity_rate_road">RateRoadActivity</string>
     <string name="title_activity_your_rated_roads">YourRatedRoadsActivity</string>
+    <string name="title_activity_explanations">ExplanationsActivity</string>
 
 </resources>

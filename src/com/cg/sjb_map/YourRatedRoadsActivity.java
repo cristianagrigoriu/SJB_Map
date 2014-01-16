@@ -3,15 +3,18 @@ package com.cg.sjb_map;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 
 public class YourRatedRoadsActivity extends Activity {
 
+	String rating;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_your_rated_roads);
-		
-		getRatings();
+		setContentView(R.layout.activity_your_rated_roads);	
 	}
 
 	@Override
@@ -22,7 +25,30 @@ public class YourRatedRoadsActivity extends Activity {
 	}
 	
 	public void getRatings() {
-		new GetRatingHTTP().execute();
+		GetRatingHTTP g = new GetRatingHTTP();
+		g.execute();
+		rating = g.getRating();	
 	}
 
+	@Override
+    protected void onStart() {
+        super.onStart();
+        
+        getRatings();
+		
+		TextView t = (TextView) findViewById(R.id.yourRatedRoadsText);
+        
+    }
+	
+	@Override
+	public void onWindowFocusChanged(boolean hasFocus) {
+		super.onWindowFocusChanged(hasFocus);
+		
+		getRatings();
+		
+		TextView t = (TextView) findViewById(R.id.yourRatedRoadsText);
+		
+		t.append(" " + rating);
+	}
+	
 }

@@ -181,9 +181,10 @@ public class MainActivity extends Activity implements GooglePlayServicesClient.C
         	startActivity(intent);
         	
             break;
-        /*case 3:
-            fragment = new CommunityFragment();
-            break;*/
+        case 3:
+        	intent = new Intent(this, ExplanationsActivity.class);
+        	startActivity(intent);
+            break;
  
         default:
             break;

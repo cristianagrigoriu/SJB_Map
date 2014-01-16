@@ -19,7 +19,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 public class GetRatingHTTP extends AsyncTask<Void, Void, Void> {
 
-	String needed;
+	static String needed = "10";
 	
 	@Override
     protected Void doInBackground(Void... arg) {
@@ -65,13 +65,6 @@ public class GetRatingHTTP extends AsyncTask<Void, Void, Void> {
 		    needed = needed.substring(0, needed.indexOf(" "));
 		    
 		    Log.d("I NEED THIS", "#" + needed + "#");
-		    
-		    try {
-		    	File file = new File("/rating.txt");
-			    BufferedWriter out = new BufferedWriter(new FileWriter(file.getAbsoluteFile()));
-	                out.write(needed);
-	            out.close();
-		    } catch (IOException e) {}
 		    
 		} catch (ParseException e) {
 			e.printStackTrace();

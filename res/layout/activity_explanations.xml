@@ -6,15 +6,15 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".YourRatedRoadsActivity" >
+    tools:context=".ExplanationsActivity" >
 
     <TextView
-        android:id="@+id/yourRatedRoadsText"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="58dp"
-        android:text="Your Rated Roads: " />
+        android:layout_marginTop="66dp"
+        android:text="Material: has strength 4\nNumber of Bumps: has strength 3\nTraffic Signs: has strength 2\nMarkers: has strength 1\nThe ratings range from 1 to 10" />
 
 </RelativeLayout>
